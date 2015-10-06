@@ -9,9 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.PageFactory;
 
-/**
- * Created by adria on 06.10.2015.
- */
 public class SearchTest extends TestCase {
     WebDriver driver;
 
@@ -30,7 +27,6 @@ public class SearchTest extends TestCase {
     }
 
     @After public void tearDown() throws Exception {
-        driver.wait(15000);
         driver.quit();
     }
 
