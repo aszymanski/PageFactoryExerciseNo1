@@ -5,9 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
-/**
- * Created by adria on 06.10.2015.
- */
+
 public class GoogleSearchPage {
     final WebDriver driver;
 
@@ -27,5 +25,8 @@ public class GoogleSearchPage {
         searchButton.click();
     }
 
+    public String getInputValue() {
 
+        return searchInput.getAttribute("value");
+    }
 }

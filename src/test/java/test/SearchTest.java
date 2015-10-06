@@ -1,7 +1,9 @@
 package test;
 
 import core.GoogleSearchPage;
+import org.junit.Assert;
 import junit.framework.TestCase;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,11 +21,12 @@ public class SearchTest extends TestCase {
     }
 
     @Test public void testSearchForm() throws Exception {
+
         driver.get("http://www.google.pl");
         GoogleSearchPage searchPage = PageFactory.initElements(driver, GoogleSearchPage.class);
         searchPage.enterText(searchtext);
         searchPage.clickSearchButton();
-
+        Assert.assertEquals(searchtext,searchPage.getInputValue());
     }
 
     @After public void tearDown() throws Exception {
